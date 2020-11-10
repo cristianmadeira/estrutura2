@@ -35,7 +35,7 @@ class DequeDinamico:
             self.inicio = element.proximo
             return element
         else:
-            Exception('Lista Vazia!')
+            raise Exception('Lista Vazia!')
 
     def remove_na_direita(self):
         if self.fim is not None:
@@ -43,7 +43,7 @@ class DequeDinamico:
             self.fim = element.anterior
             return element
         else:
-            Exception('Lista vazia!')
+            raise Exception('Lista vazia!')
 
     def ordena(self):
         elements = self.all()
@@ -75,7 +75,7 @@ class DequeDinamico:
                 direita = meio - 1
             else:
                 esquerda = meio + 1
-        Exception('Elemento não encontrado!')
+        raise Exception('Elemento não encontrado!')
 
     def get_tamanho(self):
         return self.tamanho
@@ -83,12 +83,12 @@ class DequeDinamico:
     def get_limite(self):
         return self.limite
 
-    def vazia(self):
-        return (self.inicio is None)
+    def is_vazia(self):
+        return self.inicio is None
 
     def all(self):
         if self.inicio is None:
-            Exception('Lista vazia!')
+            raise Exception('Lista vazia!')
         else:
             elements = []
             element = self.inicio

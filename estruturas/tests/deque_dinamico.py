@@ -1,5 +1,5 @@
 import unittest
-from deque_dinamico import DequeDinamico
+from deque_dinamico import DequeDinamico, Node
 
 
 class DequeTest(unittest.TestCase):
@@ -15,7 +15,7 @@ class DequeTest(unittest.TestCase):
 
     def test_get_limite(self):
         expected = 10
-        self.assertEqual(expected, self.limite)
+        self.assertEqual(expected, self.deque.get_limite())
 
     def test_insere_na_direita(self):
         element1 = 'CEFET/RJ'
@@ -133,7 +133,7 @@ class DequeTest(unittest.TestCase):
     def test_ordenar(self):
         test_sorted_list = ['a', 'b', 'c', 'd']
 
-        deque = DequeDinamico(3)
+        deque = DequeDinamico(4)
         deque.insere_na_direita('d')
         deque.insere_na_direita('c')
         deque.insere_na_direita('b')
@@ -144,7 +144,7 @@ class DequeTest(unittest.TestCase):
     def test_pesquisa(self):
         elemento = 'b'
 
-        deque = DequeDinamico(3)
+        deque = DequeDinamico(4)
         deque.insere_na_direita('d')
         deque.insere_na_direita('c')
         deque.insere_na_direita('b')
@@ -153,4 +153,64 @@ class DequeTest(unittest.TestCase):
         expected = 'b'
         result = deque.pesquisa(elemento)
 
+        self.assertEqual(expected, result)
+
+    def test_remove_na_esquerda_quando_deque_estiver_vazio(self):
+        self.assertRaises(Exception, DequeDinamico(3).remove_na_esquerda)
+
+    def test_remove_na_direita_quando_deque_estiver_vazio(self):
+        self.assertRaises(Exception, DequeDinamico(3).remove_na_direita)
+
+    def test_pesquisa_quando_elemento_estiver_na_direita(self):
+        elemento = 'd'
+
+        deque = DequeDinamico(5)
+        deque.insere_na_direita('d')
+        deque.insere_na_direita('c')
+        deque.insere_na_direita('b')
+        deque.insere_na_direita('a')
+        deque.insere_na_direita('e')
+
+        expected = 'd'
+        result = deque.pesquisa(elemento)
+
+        self.assertEqual(expected, result)
+
+    def test_pesquisa_quando_elemento_estiver_na_esquerda(self):
+        elemento = 'b'
+
+        deque = DequeDinamico(6)
+        deque.insere_na_direita('d')
+        deque.insere_na_direita('c')
+        deque.insere_na_direita('b')
+        deque.insere_na_direita('a')
+        deque.insere_na_direita('e')
+
+        expected = 'b'
+        result = deque.pesquisa(elemento)
+
+        self.assertEqual(expected, result)
+
+    def test_pesquisa_quando_elemento_nao_existir(self):
+        elemento = 'f'
+
+        deque = DequeDinamico(5)
+        deque.insere_na_direita('d')
+        deque.insere_na_direita('c')
+        deque.insere_na_direita('b')
+        deque.insere_na_direita('a')
+        deque.insere_na_direita('e')
+
+        self.assertRaises(Exception, deque.pesquisa, elemento)
+
+    def test_is_vazia(self):
+        self.assertTrue(DequeDinamico(1).is_vazia())
+
+    def test_listagem_quando_deque_estiver_vazio(self):
+        self.assertRaises(Exception, DequeDinamico(1).all)
+
+    def test_str_de_node(self):
+        expected = 'Cristian'
+        node = Node('Cristian')
+        result = node.__str__()
         self.assertEqual(expected, result)
