@@ -33,6 +33,7 @@ class DequeDinamico:
         if self.inicio is not None:
             element = self.inicio
             self.inicio = element.proximo
+            self.tamanho = self.tamanho - 1
             return element
         else:
             raise Exception('Lista Vazia!')
@@ -41,6 +42,7 @@ class DequeDinamico:
         if self.fim is not None:
             element = self.fim
             self.fim = element.anterior
+            self.tamanho = self.tamanho - 1
             return element
         else:
             raise Exception('Lista vazia!')

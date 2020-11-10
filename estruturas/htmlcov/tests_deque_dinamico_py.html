@@ -21,8 +21,8 @@
         </h1>
         <img id="keyboard_icon" src="keybd_closed.png" alt="Show keyboard shortcuts" />
         <h2 class="stats">
-            151 statements &nbsp;
-            <button type="button" class="run shortkey_r button_toggle_run" title="Toggle lines run">151 run</button>
+            166 statements &nbsp;
+            <button type="button" class="run shortkey_r button_toggle_run" title="Toggle lines run">166 run</button>
             <button type="button" class="mis show_mis shortkey_m button_toggle_mis" title="Toggle lines missing">0 missing</button>
             <button type="button" class="exc show_exc shortkey_x button_toggle_exc" title="Toggle lines excluded">0 excluded</button>
         </h2>
@@ -267,12 +267,34 @@
     <p id="t214" class="run"><span class="n"><a href="#t214">214</a></span><span class="t">        <span class="nam">node</span> <span class="op">=</span> <span class="nam">Node</span><span class="op">(</span><span class="str">'Cristian'</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p id="t215" class="run"><span class="n"><a href="#t215">215</a></span><span class="t">        <span class="nam">result</span> <span class="op">=</span> <span class="nam">node</span><span class="op">.</span><span class="nam">__str__</span><span class="op">(</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p id="t216" class="run"><span class="n"><a href="#t216">216</a></span><span class="t">        <span class="nam">self</span><span class="op">.</span><span class="nam">assertEqual</span><span class="op">(</span><span class="nam">expected</span><span class="op">,</span> <span class="nam">result</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p id="t217" class="pln"><span class="n"><a href="#t217">217</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
+    <p id="t218" class="run"><span class="n"><a href="#t218">218</a></span><span class="t">    <span class="key">def</span> <span class="nam">test_get_tamanho_apos_remocao</span><span class="op">(</span><span class="nam">self</span><span class="op">)</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
+    <p id="t219" class="pln"><span class="n"><a href="#t219">219</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
+    <p id="t220" class="run"><span class="n"><a href="#t220">220</a></span><span class="t">        <span class="nam">deque</span> <span class="op">=</span> <span class="nam">DequeDinamico</span><span class="op">(</span><span class="num">5</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p id="t221" class="run"><span class="n"><a href="#t221">221</a></span><span class="t">        <span class="nam">deque</span><span class="op">.</span><span class="nam">insere_na_direita</span><span class="op">(</span><span class="str">'d'</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p id="t222" class="run"><span class="n"><a href="#t222">222</a></span><span class="t">        <span class="nam">deque</span><span class="op">.</span><span class="nam">insere_na_direita</span><span class="op">(</span><span class="str">'c'</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p id="t223" class="run"><span class="n"><a href="#t223">223</a></span><span class="t">        <span class="nam">deque</span><span class="op">.</span><span class="nam">insere_na_direita</span><span class="op">(</span><span class="str">'b'</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p id="t224" class="run"><span class="n"><a href="#t224">224</a></span><span class="t">        <span class="nam">deque</span><span class="op">.</span><span class="nam">insere_na_direita</span><span class="op">(</span><span class="str">'a'</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p id="t225" class="run"><span class="n"><a href="#t225">225</a></span><span class="t">        <span class="nam">deque</span><span class="op">.</span><span class="nam">insere_na_direita</span><span class="op">(</span><span class="str">'e'</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p id="t226" class="pln"><span class="n"><a href="#t226">226</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
+    <p id="t227" class="run"><span class="n"><a href="#t227">227</a></span><span class="t">        <span class="nam">expected</span> <span class="op">=</span> <span class="num">5</span>&nbsp;</span><span class="r"></span></p>
+    <p id="t228" class="run"><span class="n"><a href="#t228">228</a></span><span class="t">        <span class="nam">result</span> <span class="op">=</span> <span class="nam">deque</span><span class="op">.</span><span class="nam">get_tamanho</span><span class="op">(</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p id="t229" class="pln"><span class="n"><a href="#t229">229</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
+    <p id="t230" class="run"><span class="n"><a href="#t230">230</a></span><span class="t">        <span class="nam">self</span><span class="op">.</span><span class="nam">assertEqual</span><span class="op">(</span><span class="nam">expected</span><span class="op">,</span> <span class="nam">result</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p id="t231" class="pln"><span class="n"><a href="#t231">231</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
+    <p id="t232" class="run"><span class="n"><a href="#t232">232</a></span><span class="t">        <span class="nam">deque</span><span class="op">.</span><span class="nam">remove_na_direita</span><span class="op">(</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p id="t233" class="run"><span class="n"><a href="#t233">233</a></span><span class="t">        <span class="nam">deque</span><span class="op">.</span><span class="nam">remove_na_direita</span><span class="op">(</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p id="t234" class="pln"><span class="n"><a href="#t234">234</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
+    <p id="t235" class="run"><span class="n"><a href="#t235">235</a></span><span class="t">        <span class="nam">expected</span> <span class="op">=</span> <span class="num">3</span>&nbsp;</span><span class="r"></span></p>
+    <p id="t236" class="run"><span class="n"><a href="#t236">236</a></span><span class="t">        <span class="nam">result</span> <span class="op">=</span> <span class="nam">deque</span><span class="op">.</span><span class="nam">get_tamanho</span><span class="op">(</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p id="t237" class="pln"><span class="n"><a href="#t237">237</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
+    <p id="t238" class="run"><span class="n"><a href="#t238">238</a></span><span class="t">        <span class="nam">self</span><span class="op">.</span><span class="nam">assertEqual</span><span class="op">(</span><span class="nam">expected</span><span class="op">,</span> <span class="nam">result</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
 </div>
 <div id="footer">
     <div class="content">
         <p>
             <a class="nav" href="index.html">&#xab; index</a> &nbsp; &nbsp; <a class="nav" href="https://coverage.readthedocs.io">coverage.py v5.3</a>,
-            created at 2020-11-10 15:30 -0300
+            created at 2020-11-10 15:39 -0300
         </p>
     </div>
 </div>

@@ -214,3 +214,25 @@ class DequeTest(unittest.TestCase):
         node = Node('Cristian')
         result = node.__str__()
         self.assertEqual(expected, result)
+
+    def test_get_tamanho_apos_remocao(self):
+
+        deque = DequeDinamico(5)
+        deque.insere_na_direita('d')
+        deque.insere_na_direita('c')
+        deque.insere_na_direita('b')
+        deque.insere_na_direita('a')
+        deque.insere_na_direita('e')
+
+        expected = 5
+        result = deque.get_tamanho()
+
+        self.assertEqual(expected, result)
+
+        deque.remove_na_direita()
+        deque.remove_na_direita()
+
+        expected = 3
+        result = deque.get_tamanho()
+
+        self.assertEqual(expected, result)
