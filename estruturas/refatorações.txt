@@ -1,0 +1,13 @@
+Para facilitar as remoções e as pequisas foram feitas as seguintes modificações:
+    ->Foi adicionado mais um ponteiro, ou seja, agora terá um apontando para o início e outro para fim.
+    ->Foi implementado o algoritmo de busca binária.
+    ->Foi implementado o algoritmo Bubble sort, entretanto a escolha não se baseou em nenhum critério foi apenas um pré-requisito para busca binária.
+Outras refatorações com base do livro Clean Code:
+    ->Função get_tamanho ficou ambíguo, pois retornará o valor da variável tamanho ou o tamanho da lista?
+    ->Função insere_dir ficou ambígua, pois inserirá em um diretório ou na direita?
+    ->função insere_esq não passou exatamente o que iria fazer, se ia apenas inserir ou retornar o objeto?
+    -> Nas funções que retornavam algum valor booleano ou retornava um print ou até mesmo print cada item do Deque, foi refatorado seguindo algumas convenções de código limpo:
+        ->Evitar passagem de parâmetro booleano ou evitar o tal retorno
+        ->Evitar comando de mensagem de saída, em vez disso gerar um exceção. Nunca deve-se retornar nulo ou passar um valor nulo. Deve-se gerar um exceção ou criar um objeto de caso especial
+Conclusão:
+    Portanto, mesmo tendo feito algumas contribuições hão de existir alguns testes mal-feitos ou implementações um pouco custosas a nível computacional, mas continuar evoluindo é sempre um bom avanoa através das coloborações.
